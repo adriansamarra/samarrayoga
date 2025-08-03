@@ -1,0 +1,223 @@
+.sqs-block-summary-v2 .summary-item {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* Light Mode Button - Black Background, White Text */
+header[data-section-theme="white"] a.user-accounts-text-link,
+header[data-section-theme="light"] a.user-accounts-text-link,
+header[data-section-theme="white-bold"] a.user-accounts-text-link,
+header[data-section-theme="light-bold"] a.user-accounts-text-link,
+header[data-section-theme="bright"] a.user-accounts-text-link {
+  background-color: black !important;
+  color: white !important;
+  padding: 5px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Button - White Background, Black Text */
+header[data-section-theme="dark"] a.user-accounts-text-link,
+header[data-section-theme="dark-bold"] a.user-accounts-text-link,
+header[data-section-theme="bright-inverse"] a.user-accounts-text-link,
+header[data-section-theme="black"] a.user-accounts-text-link,
+header[data-section-theme="black-bold"] a.user-accounts-text-link {
+  background-color: white !important;
+  color: black !important;
+  padding: 5px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-nav-folder-content{
+  border-radius: 1rem;
+}
+
+.lessons-item-related-wrapper {
+background-color:   #E8E8E8;
+}
+
+.lessons-item-related-wrapper .lessons-item-related-item-list .related-item .related-item-link-text {
+font-size: 1.25rem;
+}
+
+.lessons-item-related-wrapper .lessons-item-related-item-list .related-item img.related-item-thumbnail {
+border-radius: 0.5rem;
+margin-bottom: 1rem;
+}
+
+.grid-image-wrapper{
+    border-radius: 0.5rem;
+}
+
+/* H4 styling */
+h1, h2, h3, h4 {
+  margin: 2rem 0 0.5rem 0;
+}
+
+
+/* Default Logo (Light Mode) */
+header[data-section-theme="white"] .header-title-logo,
+header[data-section-theme="light"] .header-title-logo,
+header[data-section-theme="white-bold"] .header-title-logo,
+header[data-section-theme="light-bold"] .header-title-logo,
+header[data-section-theme="bright"] .header-title-logo {
+background: url(https://static1.squarespace.com/static/670d7af1309d916ea120f581/t/6796897cb47c590ce478a5ec/1737918844473/sy-ver-blk.svg) no-repeat left center !important; /* Align left */
+background-size: contain !important;
+}
+
+/* Dark Mode Logo */
+header[data-section-theme="dark"] .header-title-logo,
+header[data-section-theme="dark-bold"] .header-title-logo,
+header[data-section-theme="bright-inverse"] .header-title-logo,
+header[data-section-theme="black"] .header-title-logo,
+header[data-section-theme="black-bold"] .header-title-logo {
+background: url(https://static1.squarespace.com/static/670d7af1309d916ea120f581/t/679691db22122440cf948d62/1737920987514/sy-ver-light.svg) no-repeat left center !important; /* Align left */
+background-size: contain !important;
+}
+
+/* PROPS HIDE */
+
+/* Hide categories where the link text includes "Props:" */
+.lesson-category a[href*="props-"] {
+display: none !important;
+}
+
+/* Hide the associated <li> if needed */
+.lesson-category a[href*="props-"] + span,
+.lesson-category a[href*="props-"] {
+display: none !important;
+}
+
+/* Hide Props categories from the video filters */
+.video-category-nav-link a[href*="props-"] {
+display: none !important;
+}
+
+/* Hide the separator (|) following the hidden Props categories */
+.video-category-nav-link a[href*="props-"] + .breadcrumb-separator {
+display: none !important;
+}
+
+
+
+/* Props Needed Section Styling */
+
+.props-needed {
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 16px;
+padding-left: 0px;
+}
+
+.props-needed h3 {
+font-size: 1.5em;
+color: #4a4a4a;
+margin-bottom: 16px;
+}
+
+.props-needed ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-wrap: wrap; /* Allows pills to wrap to the next line */
+gap: 16px; /* Adds spacing between pills */
+}
+
+.props-needed li {
+display: flex;
+align-items: center;
+padding: 2px 20px 2px 10px; /* Adds space inside the pill */
+background-color: white;
+border: 1px solid #ddd; /* Adds a subtle border */
+border-radius: 50px; /* Makes the pill shape */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+white-space: nowrap; /* Prevents text from wrapping inside the pill */
+}
+
+.props-needed img {
+width: 48px;
+height: 48px;
+margin-right: 8px;
+border-radius: 50%; /* Makes the image circular */
+}
+
+.props-needed span {
+font-size: 14px;
+color: #4a4a4a;
+}
+
+/* Hide big overlay play button */
+.plyr__control.plyr__control--overlaid {
+display: none !important;
+}
+.video-player__container--click-to-play::before,
+.plyr__video-wrapper::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100px;               /* bigger circle */
+height: 100px;              /* bigger circle */
+background-color: rgba(255, 255, 255, 0.15); /* subtle white circle */
+border-radius: 50%;
+opacity: 0;
+transition: opacity 0.3s ease;
+pointer-events: none;
+z-index: 10;
+box-shadow: none;           /* no blur/shadow */
+}
+
+.video-player__container--click-to-play::after,
+.plyr__video-wrapper::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-40%, -50%);
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 22px 0 22px 36px; /* slightly bigger triangle */
+border-color: transparent transparent transparent white;
+opacity: 0;
+transition: opacity 0.3s ease;
+pointer-events: none;
+z-index: 11;
+}
+
+/* Show on hover */
+.video-player__container--click-to-play:hover::before,
+.plyr__video-wrapper:hover::before,
+.video-player__container--click-to-play:hover::after,
+.plyr__video-wrapper:hover::after {
+opacity: 1;
+}
+
+
+.grid-image-wrapper {
+position: relative; /* Make sure it’s relative to position pill */
+overflow: visible;  /* So pill is not cut off */
+}
+
+.duration-pill {
+position: absolute;
+bottom: 8px;
+right: 8px;
+background: rgba(0, 0, 0, 0.75); /* semi-transparent dark background */
+color: white;
+padding: 3px 8px;
+border-radius: 12px; /* rounded pill shape */
+font-size: 11px;
+font-weight: 600;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+user-select: none;
+pointer-events: none;
+z-index: 10;
+white-space: nowrap;
+line-height: 1.2;
+}
